@@ -41,19 +41,18 @@ class LinkedList:
     def reverse_list(self, node, prev):
         # check for head
         if self.head is None:
-            return 
+            return None
 
         cur_node = node
         # set head
         cur_node = self.head
         # set prev
         prev = None   
-          
-        
+      
         # while loop to reverse
         while cur_node != None:
             # set to next node
-            after = cur_node.next  
+            after = cur_node.next
             # reverse the list
             cur_node.next = prev
             # move prev to next 
@@ -62,9 +61,12 @@ class LinkedList:
             cur_node = after
             # set pointer if not last node
             if after:
-                after = after.next       
+                after = after.next 
+            if after.next is None:
+                break      
         # process
         self.head = prev
-        self.reverse_list(cur_node, prev)
+        return prev
 
-        
+
+
