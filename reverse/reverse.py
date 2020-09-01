@@ -52,18 +52,16 @@ class LinkedList:
         # while loop to reverse
         while cur_node != None:
             # set to next node
-            after = cur_node.next
+            after = cur_node.next_node
             # reverse the list
-            cur_node.next = prev
+            cur_node.next_node = prev
             # move prev to next 
             prev = cur_node
             # move cur to next
             cur_node = after
             # set pointer if not last node
             if after:
-                after = after.next 
-            if after.next is None:
-                break      
+                after = after.next_node            
         # process
         self.head = prev
         return prev

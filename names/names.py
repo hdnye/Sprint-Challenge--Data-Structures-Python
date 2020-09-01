@@ -21,17 +21,18 @@ duplicates = []  # Return the list of duplicates in this data structure
 
 
 
-# find the duplicate names
-# add the dupes to the empty list
-
+# import class 
 bst = BSTNode('value')
 
 for i in names_1:
     bst.insert(i)
-
+    # find the duplicate names
+    # add the dupes to the empty list
 for x in names_2:
     if bst.contains(x):
         duplicates.append(x)
+
+
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")

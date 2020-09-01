@@ -63,3 +63,15 @@ class BSTNode:
            # else: go left, return node.left.contains(value)
            else:
                return self.left.contains(target)
+
+    # def duplicates_sorted(self, list):
+    #     l = list
+    #     duplicate_elements = []
+    #     while l is not None:
+    #         if l.next is None:
+    #             break
+    #         if l.item == l.next.item:
+    #             duplicate_elements.append(l.item)
+    #             l = l.next
+
+    
